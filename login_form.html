@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Form</title>
+  <!--Example: Login Form with Toggle Password & Validation Highlights-->
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f4f8;
+    }
+
+    .form-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 15px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: dodgerblue;
+      background-color: #eef8ff;
+    }
+
+    label {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .toggle-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      width: 100%;
+      background: dodgerblue;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: royalblue;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .note {
+      display: none;
+      color: green;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    #show:checked + label + .note {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-box">
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Enter username" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter password" required />
+
+      <div class="toggle-box">
+        <input type="checkbox" id="show" />
+        <label for="show">Show Password Hint</label>
+        <div class="note">Hint: It's "123456" 😉</div>
+      </div>
+
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+
+</body>
+</html>
